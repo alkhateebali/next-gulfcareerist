@@ -1,14 +1,22 @@
-import { NextRequest, NextResponse } from "next/server";
 import axios from "axios";
+import { NextRequest, NextResponse } from "next/server";
+import { Search } from "@/app/types/jobs/Job";
 
-export async function GET(request: NextRequest) {
+interface Props {
+  searchParams: { search: Search };
+}
+export async function GET(
+  request: NextRequest,
+  { searchParams }: { searchParams: { search: Search } }
+) {
   try {
-    const response = await axios.get(`http://0.0.0.0:8080/api/jobs`);
-     return NextResponse.json(response.data);
-
+    const response = await axios.get(`http://0.0.0.0:8080/api/jobs`, {
+      params: searchParams.search,
+    });
+    return NextResponse.json(response.data);
   } catch (error) {
-    console.error('Error fetching job detail:', error);
-    return NextResponse.json(error)
+    console.error("Error fetching job detail:", error);
+    return NextResponse.json(error);
   }
 }
 
@@ -24,13 +32,7 @@ export async function GET(request: NextRequest) {
 //   location: "New York",
 //   page: 1,
 // };
-// interface Props {
-//   params: {
-//     keywords: string;
-//     location: string;
-//     page: number;
-//   };
-// }
+
 // const apiClient = axios.create({
 //   baseURL: API_URL,
 //   params: searchParams,
