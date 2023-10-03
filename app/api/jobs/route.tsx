@@ -1,6 +1,5 @@
 import axios from "axios";
 import { NextRequest, NextResponse } from "next/server";
-import { Search } from "@/app/types/jobs/Job";
 
 interface Props {
   searchParams:  {
