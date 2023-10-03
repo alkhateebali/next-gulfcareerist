@@ -28,6 +28,6 @@ export const getId = (url: string) => {
   if (match && match[1]) return match[1];
   else return "Value not found in the URL";
 };
-export interface FetchJobssResponse {
+export interface FetchJobsResponse {
   jobs: Job[];
 }

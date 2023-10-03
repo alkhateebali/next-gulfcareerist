@@ -3,17 +3,25 @@ import { NextRequest, NextResponse } from "next/server";
 import { Search } from "@/app/types/jobs/Job";
 
 interface Props {
-  searchParams: { search: Search };
+  searchParams:  {
+  keywords: string;
+  location: string;
+  page: number;
+}
 }
 export async function GET(
   request: NextRequest,
-  { searchParams }: { searchParams: { search: Search } }
+  { searchParams }: {  searchParams:  {
+    keywords: string;
+    location: string;
+    page: number;
+  }}
 ) {
   try {
     const response = await axios.get(`http://0.0.0.0:8080/api/jobs`, {
-      params: searchParams.search,
+      params: searchParams,
     });
-    return NextResponse.json(response.data);
+    return NextResponse.json(response.data.jobs);
   } catch (error) {
     console.error("Error fetching job detail:", error);
     return NextResponse.json(error);
