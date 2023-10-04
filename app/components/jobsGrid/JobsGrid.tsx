@@ -8,17 +8,20 @@ const JobsGrid = async ({
 }: {
   searchParams: { keywords: string; location: string; page: number };
 }) => {
-  const queryString = `location=${searchParams.location}&keywords=${searchParams.keywords}&page=${searchParams.page}`;
-  const url = `http://localhost:3000/api/jobs?${queryString}`;
-  console.log(url);
+  let jobs: Job[] = [];
 
-  const response = await fetch(url);
-  const jobs: Job[] = await response.json();
+  if ( searchParams?.keywords?.length > 0) {
+    const queryString = `location=${searchParams.location}&keywords=${searchParams.keywords}&page=${searchParams.page}`;
+    const url = `http://localhost:3000/api/jobs?${queryString}`;
+    console.log(url);
+
+    const response = await fetch(url);
+    jobs = await response.json();
+  }
 
   return (
     <ul>
-      {jobs.length > 0 &&
-        jobs.map((job) => <li key={job.url}>{job.title}</li>)}
+      {jobs.length > 0 && jobs.map((job) => <li key={job.url}>{job.title}</li>)}
     </ul>
   );
 };
