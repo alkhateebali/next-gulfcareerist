@@ -16,7 +16,7 @@ const JobsGrid = async ({
     const url = `http://localhost:3000/api/jobs?${queryString}`;
     console.log(url);
 
-    const response = await fetch(url,);
+    const response = await fetch(url, { cache: "no-store" });
     jobs = await response.json();
   }
 
