@@ -3,10 +3,11 @@ import Briefcase from "./icons/Briefcase";
 import Location from "./icons/Location";
 import useSearch from "./useSearch";
 
+
 const SearchBox = () => {
   const { handleSubmit, onSubmit, register } = useSearch();
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
       <div className="flex flex-wrap  p-5">
         <div className="join join-vertical lg:w-2/6 lg:mr-2 md:mt-4">
           <div className="join join-horizontal">
@@ -30,10 +31,9 @@ const SearchBox = () => {
           </label>
           <Location />
           </div>
-         
           <input
             type="text"
-            placeholder="Town or region"
+            placeholder="Town or region in Gulf countries"
             className="input input-bordered input-primary "
             {...register("location")}
           />

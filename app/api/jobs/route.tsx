@@ -2,23 +2,27 @@ import axios from "axios";
 import { NextRequest, NextResponse } from "next/server";
 
 interface Props {
-  searchParams:  {
-  keywords: string;
-  location: string;
-  page: number;
-}
-}
-export async function GET(
-  request: NextRequest,
-  { searchParams }: {  searchParams:  {
+  searchParams: {
     keywords: string;
     location: string;
     page: number;
-  }}
+  };
+}
+export async function GET(
+  request: NextRequest,
+  {
+    searchParams,
+  }: {
+    searchParams: {
+      keywords: string;
+      location: string;
+      page: number;
+    };
+  }
 ) {
   try {
     const response = await axios.get(`http://0.0.0.0:8080/api/jobs`, {
-      params: searchParams,
+      params: searchParams
     });
     return NextResponse.json(response.data.jobs);
   } catch (error) {
