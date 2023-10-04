@@ -3,6 +3,7 @@ import { Job, getId } from "@/app/types/jobs/Job";
 import FromNow from "../FromNow";
 import Location from "../searchBox/icons/Location";
 
+
 interface Props {
   job: Job;
 }
@@ -23,7 +24,7 @@ const JobCard = ({ job }: Props) => {
             <Location color="#fa9f00" />
             <span className="px-2"> {job.locations}</span>
           </div>
-          <p className="prose prose-grey">{job.description}</p>
+          <div className="prose prose-grey"  dangerouslySetInnerHTML={{ __html: job.description }} />
           <FromNow date={job.date} />
         </div>
       </div>
