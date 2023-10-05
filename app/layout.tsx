@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en" data-theme="corporate">
       <body className={inter.className}>
         <Navbar />
-        <main className="min-h-screen p-10 justify-center"  >{children}</main>
+        <main className="min-h-screen justify-center   px-4  py-8    "  >{children}</main>
 
         <Footer />
       </body>

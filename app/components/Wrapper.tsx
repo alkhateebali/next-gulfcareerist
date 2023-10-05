@@ -1,7 +1,7 @@
 
 const Wrapper = () => {
   return (
-    <div>Wrapper</div>
+    <div className="container py-4">Wrapper</div>
   )
 }
 

@@ -15,5 +15,12 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+}
 
