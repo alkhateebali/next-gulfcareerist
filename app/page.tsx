@@ -21,7 +21,7 @@ export default function Home({
 }) {
   return (
     <>
-      <div className="conatainer py-4 lg:px-8">
+      <div className="conatainer py-4 lg:px-14">
         <SearchBox />
       </div>
       <div className="conatainer py-4 lg:px-8">

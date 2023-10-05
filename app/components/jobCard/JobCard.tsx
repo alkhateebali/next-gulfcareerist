@@ -26,6 +26,7 @@ const JobCard = ({ job }: Props) => {
           </div>
           <div className="prose-grey"  dangerouslySetInnerHTML={{ __html: job.description }} />
           <FromNow date={job.date} />
+        
         </div>
       </div>
     </>

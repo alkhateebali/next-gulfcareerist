@@ -3,19 +3,17 @@ import Briefcase from "./icons/Briefcase";
 import Location from "./icons/Location";
 import useSearch from "./useSearch";
 
-
 const SearchBox = () => {
   const { handleSubmit, onSubmit, register } = useSearch();
   return (
     <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
       <div className="flex flex-wrap  items-center  justify-center  gap-4 ">
-
         <div className="join join-vertical w-full lg:w-1/3  ">
           <div className="join join-horizontal ">
             <label htmlFor="what" className="text-lg pb-2 mr-2">
               What
             </label>
-             <Briefcase/>
+            <Briefcase />
           </div>
 
           <input
@@ -26,12 +24,13 @@ const SearchBox = () => {
           />
         </div>
         <div className="join join-vertical w-full   lg:w-1/3  ">
-          <div  className="join join-horizontal" >
-          <label htmlFor="where" className="text-lg pb-2 pr-2">
-            Where
-          </label>
-          <Location />
+          <div className="join join-horizontal">
+            <label htmlFor="where" className="text-lg pb-2 pr-2">
+              Where
+            </label>
+            <Location />
           </div>
+          
           <input
             type="text"
             placeholder="Town or region in Gulf countries"
