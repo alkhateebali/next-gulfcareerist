@@ -11,6 +11,7 @@ export async function GET(request: NextRequest) {
     const response = await axios.get(`http://0.0.0.0:8080/api/jobs`, {
       params: { keywords: keywords, location: location, page: page },
     });
+    
     return NextResponse.json(response.data.jobs);
   } catch (error) {
     console.error("Error fetching job detail:", error);

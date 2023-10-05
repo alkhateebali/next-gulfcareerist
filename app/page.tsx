@@ -1,6 +1,7 @@
 import JobsGrid from "./components/jobsGrid/JobsGrid";
+import useJobs from "./components/jobsGrid/useJobs";
 import SearchBox from "./components/searchBox/SearchBox";
-import { Search } from "./types/jobs/Job";
+import { Job, Search } from "./types/jobs/Job";
 
 interface Props {
   searchParams: {
@@ -10,7 +11,7 @@ interface Props {
   };
 }
 
-export default function Home({
+export default async function Home({
   searchParams,
 }: {
   searchParams: {
@@ -19,6 +20,8 @@ export default function Home({
     page: number;
   };
 }) {
+  const jobs = await useJobs(searchParams);
+
   return (
     <>
       <div className="conatainer py-4 lg:px-14">
@@ -28,7 +31,7 @@ export default function Home({
         <div className="grid grid-cols-1  lg:grid-cols-4  gap-4">
           <div className=""></div>
           <div className="col-span-3 ">
-            <JobsGrid searchParams={searchParams} />
+            <JobsGrid jobs={jobs} />
           </div>
         </div>
       </div>
