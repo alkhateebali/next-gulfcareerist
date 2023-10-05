@@ -4,7 +4,7 @@ interface Props {
   jobs: Job[];
 }
 const JobsGrid = ({ jobs }: Props) => {
-  return <ul>{jobs.length > 0 && jobs.map((job) => <JobCard job={job} />)}</ul>;
+  return <>{jobs.length > 0 && jobs.map((job) => <JobCard   key={job.url}   job={job} />)}</>;
 };
 
 export default JobsGrid;

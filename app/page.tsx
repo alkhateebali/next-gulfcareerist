@@ -1,7 +1,6 @@
 import JobsGrid from "./components/jobsGrid/JobsGrid";
 import useJobs from "./components/jobsGrid/useJobs";
 import SearchBox from "./components/searchBox/SearchBox";
-import { Job, Search } from "./types/jobs/Job";
 
 interface Props {
   searchParams: {
