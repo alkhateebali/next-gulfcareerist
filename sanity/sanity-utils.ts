@@ -1,7 +1,6 @@
 import { createClient, groq } from "next-sanity";
 import { Post } from "../types/blog/post";
-import clientConfig from './config/client-config'
-
+import clientConfig from "./config/client-config";
 
 export const getPosts = async (): Promise<Post[]> => {
   return createClient(clientConfig).fetch(

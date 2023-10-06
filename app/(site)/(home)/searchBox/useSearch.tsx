@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { Search } from "@/app/types/jobs/Job";
+import { Search } from "@/types/jobs/Job";
 import { useRouter } from "next/navigation";
 
 const useSearch = () => {

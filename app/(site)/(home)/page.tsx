@@ -1,6 +1,6 @@
-import JobsGrid from "./components/jobsGrid/JobsGrid";
-import useJobs from "./components/jobsGrid/useJobs";
-import SearchBox from "./components/searchBox/SearchBox";
+import JobsGrid from "./jobsGrid/JobsGrid";
+import useJobs from "./jobsGrid/useJobs";
+import SearchBox from "./searchBox/SearchBox";
 
 
 interface Props {

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import logo from '../public/img/logo.svg'
+import logo from '../../../public/img/logo.svg'
 import Link from 'next/link';
 
 // bg-base-100 shadow-md text-zinc-950"

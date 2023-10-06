@@ -1,4 +1,4 @@
-import { getPosts } from "@/app/sanity/sanity-utils";
+import { getPosts } from "@/sanity/sanity-utils";
 import PostCard from "./PostCard";
 import Breadcrumbs from "./Breadcrumbs";
 import Container from "./Container";
