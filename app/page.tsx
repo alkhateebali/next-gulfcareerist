@@ -2,6 +2,7 @@ import JobsGrid from "./components/jobsGrid/JobsGrid";
 import useJobs from "./components/jobsGrid/useJobs";
 import SearchBox from "./components/searchBox/SearchBox";
 
+
 interface Props {
   searchParams: {
     keywords: string;
@@ -20,7 +21,7 @@ export default async function Home({
   };
 }) {
   const response = await useJobs(searchParams);
-  const jobs = response.jobs;
+  const jobs= response.jobs;
 
   return (
     <>

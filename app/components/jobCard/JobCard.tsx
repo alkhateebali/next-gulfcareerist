@@ -15,7 +15,7 @@ const JobCard = ({ job }: Props) => {
   return (
     <>
       <div className="card w-full bg-base-100 shadow-md hover:bg-slate-50 my-4">
-        <div className="card-body">
+        <div className="card-body ">
           <h2 className="card-title text-sky-600 prose-2xl">
             <Link href={url}>{job.title}</Link>
           </h2>
