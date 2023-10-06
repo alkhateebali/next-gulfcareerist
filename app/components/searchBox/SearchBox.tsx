@@ -7,7 +7,7 @@ const SearchBox = () => {
   const { handleSubmit, onSubmit, register } = useSearch();
   return (
     <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
-      <div className="flex flex-wrap  items-center  justify-center  gap-4 ">
+      <div className="flex flex-wrap  items-end  justify-center  gap-4 ">
         <div className="join join-vertical w-full lg:w-1/3  ">
           <div className="join join-horizontal ">
             <label htmlFor="what" className="text-lg pb-2 mr-2">
@@ -40,7 +40,7 @@ const SearchBox = () => {
           <input hidden value={1} {...register("page")} />
         </div>
         <div className="w-full lg:w-1/6 ">
-          <button type="submit" className="btn  w-full   ">
+          <button type="submit" className="btn btn-primary w-full   ">
             Search
           </button>
         </div>
