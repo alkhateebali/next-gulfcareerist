@@ -1,4 +1,3 @@
-
 const post = {
   name: "post",
   title: "Post",
@@ -16,6 +15,11 @@ const post = {
       options: { source: "title" },
     },
     {
+      name: "introduction",
+      title: "Introduction",
+      type: "string",
+    },
+    {
       name: "featuredImage",
       title: "Featured Image",
       type: "image",
@@ -27,11 +31,6 @@ const post = {
           type: "string",
         },
       ],
-    },
-    {
-      name: "url",
-      title: "Url",
-      type: "url",
     },
     {
       name: "content",

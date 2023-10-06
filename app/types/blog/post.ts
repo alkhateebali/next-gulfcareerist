@@ -5,8 +5,8 @@ export interface Post {
   _createdAt: Date;
   title: string;
   slug: string;
+  introduction: string;
   featuredImage: string;
-  alt:string,
-  url: string;
+  alt: string;
   content: PortableTextBlock[];
 }
