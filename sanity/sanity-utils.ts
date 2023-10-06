@@ -10,7 +10,7 @@ export const getPosts = async (): Promise<Post[]> => {
         title,
         introduction,
         "slug": slug.current,
-        "feateredImage": featuredImage.asset->url,
+        "featuredImage": featuredImage.asset->url,
       }`
   );
 };
@@ -21,7 +21,7 @@ export const getPost = async (slug: string): Promise<Post> => {
         _createdAt,
         title,
         "slug": slug.current,
-        "feateredImage": feateredImage.asset->url,
+        "featuredImage": featuredImage.asset->url,
         content
       }`,
     { slug }

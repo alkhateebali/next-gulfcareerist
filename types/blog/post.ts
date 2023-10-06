@@ -6,7 +6,7 @@ export interface Post {
   title: string;
   slug: string;
   introduction: string;
-  featuredImage: string;
+  featuredImage: string;  //
   alt: string;
   content: PortableTextBlock[];
 }
