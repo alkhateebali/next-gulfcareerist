@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Post } from "../types/blog/post";
+import { Post } from "@/types/blog/post";
 import Link from "next/link";
 import FromNow from "../components/FromNow";
 
