@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Post } from "../types/blog/post";
 import Link from "next/link";
+import FromNow from "../components/FromNow";
 
 interface Props {
   post: Post;
@@ -8,14 +9,14 @@ interface Props {
 const PostCard = ({ post }: Props) => {
   return (
     <Link href={`blog/article/${post.slug}`}>
-      <div className="card w-dull bg-base-100 border-b border-gray-200  py-10  my-10  cursor-pointer hover:scale-105  hover:bg-slate-50  transition">
+      <div className="card w-dull bg-base-100 border-b border-gray-200  py-2 my-2 mx-2 cursor-pointer hover:scale-105  hover:bg-slate-50  transition">
         <div className="card-body">
           <div className="grid grid-cols-4 gap-4">
             <div className="col-span-3">
-              <h2 className="card-title text-xl font-bold">
-                {post.featuredImage}
-              </h2>
-              <p>{post.introduction}</p>
+              <h2 className="card-title text-xl font-bold">{post.title}</h2>
+              <p className=" text-gray-600  py-4">{post.introduction}</p>
+              <p>Post image url : {post.featuredImage} </p>
+              <FromNow date={post._createdAt.toString()} />
             </div>
             <div className="col-span-1">
               <figure>
