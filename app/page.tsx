@@ -19,7 +19,8 @@ export default async function Home({
     page: number;
   };
 }) {
-  const jobs = await useJobs(searchParams);
+  const response = await useJobs(searchParams);
+  const jobs = response.jobs;
 
   return (
     <>
