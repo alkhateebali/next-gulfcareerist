@@ -1,8 +1,11 @@
 
 
+
 const Aside = () => {
   return (
-    <div>Aside</div>
+    <div className="">
+      
+    </div>
   )
 }
 

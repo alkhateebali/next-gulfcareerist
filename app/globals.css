@@ -2,12 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --font-lora: 'Lora', serif;
+}
 @layer base {
   h1 {
-    @apply text-2xl;
+    @apply text-3xl p-2 font-extrabold ;
   }
   h2 {
-    @apply text-xl;
+    @apply text-2xl p-2;
   }
 }
-
+@layer utilities {
+  .overflow-wrap-break-word {
+    overflow-wrap: break-word;
+  }
+}
+html{
+  color: rgba(0,0,0,0.8);
+  overflow-wrap: break-word;
+}
+.font-lora{
+  font-family: var(--font-lora);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+}

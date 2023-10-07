@@ -1,17 +1,26 @@
 import { getPosts } from "@/sanity/sanity-utils";
 import PostCard from "./PostCard";
 import Breadcrumbs from "./Breadcrumbs";
-import Container from "./Container";
+
+import Aside from "./Aside";
 
 const Blog = async () => {
   const posts = await getPosts();
   return (
     <>
       <Breadcrumbs currentRoute="Blog" />
-      <Container>
-        {posts.length > 0 &&
-          posts.map((post) => <PostCard key={post._id} post={post} />)}
-      </Container>
+
+      <div className="conatainer py-4 lg:px-14">
+        <div className="grid   grid-col-1  lg:grid-cols-4 ">
+          <div className="col-span-3">
+            {posts.length > 0 &&
+              posts.map((post) => <PostCard key={post._id} post={post} />)}
+          </div>
+          <div className="col-span-1">
+            <Aside />
+          </div>
+        </div>
+      </div>
     </>
   );
 };
