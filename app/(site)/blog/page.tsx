@@ -11,13 +11,13 @@ const Blog = async () => {
       <Breadcrumbs currentRoute="Blog" />
 
       <div className="conatainer py-4 lg:px-14">
-        <div className="grid   grid-col-1  lg:grid-cols-4 ">
+        <div className="grid   grid-col-1  lg:grid-cols-4 gap-8 ">
           <div className="col-span-3">
             {posts.length > 0 &&
               posts.map((post) => <PostCard key={post._id} post={post} />)}
           </div>
           <div className="col-span-1">
-            <Aside />
+            <Aside  />
           </div>
         </div>
       </div>

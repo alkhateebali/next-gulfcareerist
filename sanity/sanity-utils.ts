@@ -1,6 +1,7 @@
 import { createClient, groq } from "next-sanity";
 import { Post } from "../types/blog/post";
 import clientConfig from "./config/client-config";
+import Category from "@/types/blog/category";
 
 export const getPosts = async (): Promise<Post[]> => {
   return createClient(clientConfig).fetch(
@@ -39,3 +40,14 @@ export const getPost = async (slug: string): Promise<Post> => {
     { slug }
   );
 };
+
+export const getCategories=async(): Promise<Category[]>=>{
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "category"]{
+      _id,
+      _createdAt,
+      title
+    }`
+  )
+
+}

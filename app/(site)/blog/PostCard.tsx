@@ -37,8 +37,8 @@ const PostCard = ({ post }: Props) => {
                 className="object-cover rounded-sm w-full h-auto"
                 src={post.mainImage}
                 alt=""
-                width={1200}
-                height={630}
+                width={200}
+                height={200}
               />
             </div>
           </div>
