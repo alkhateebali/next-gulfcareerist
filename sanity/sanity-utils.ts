@@ -4,16 +4,17 @@ import clientConfig from "./config/client-config";
 
 export const getPosts = async (): Promise<Post[]> => {
   return createClient(clientConfig).fetch(
-    
+
     groq`*[_type == "post"]{
         _id,
         _createdAt,
         title,
         "slug": slug.current,
+        introduction,
         "mainImage": mainImage.asset->url,
-        "name": author->name,
+        "authorname": author->name,
         "categories": categories[]->title,
-        "authorImage": author->image,
+        "authorImage": author->image.asset->url,
         body
       }`
   );
