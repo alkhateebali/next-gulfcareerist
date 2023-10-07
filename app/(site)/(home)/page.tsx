@@ -1,7 +1,6 @@
 import JobsGrid from "./jobsGrid/JobsGrid";
 import useJobs from "./jobsGrid/useJobs";
-import SearchBox from "./searchBox/SearchBox";
-
+import SearchBox from "../components/searchBox/SearchBox";
 
 interface Props {
   searchParams: {
@@ -21,7 +20,7 @@ export default async function Home({
   };
 }) {
   const response = await useJobs(searchParams);
-  const jobs= response.jobs;
+  const jobs = response.jobs;
 
   return (
     <>

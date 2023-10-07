@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Job, getId } from "@/types/jobs/Job";
 import FromNow from "../../components/FromNow";
-import Location from "../searchBox/icons/Location";
+import Location from "../../components/searchBox/icons/Location";
 
 interface Props {
   job: Job;

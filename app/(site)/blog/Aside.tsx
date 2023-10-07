@@ -1,11 +1,10 @@
+import SearchBox from "../components/searchBox/SearchBox"
 
 
 
 const Aside = () => {
   return (
-    <div className="">
-      
-    </div>
+    <SearchBox />
   )
 }
 
