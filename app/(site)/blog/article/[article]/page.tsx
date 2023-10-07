@@ -15,14 +15,14 @@ const Article = async ({ params }: Props) => {
           <div className="">
             <Image
               className="object-cover rounded-sm w-full"
-              src={article.featuredImage}
-              alt={article.alt}
+              src={article.mainImage}
+              alt=""
               width={600}
               height={315}
             />
           </div>
           <div className="overflow-wrap-break-word font-lora font-sm">
-            <PortableText value={article.content} />
+            <PortableText value={article.body} />
           </div>
         </div>
       </div>
