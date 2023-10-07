@@ -4,9 +4,10 @@ import imageUrlBuilder from "@sanity/image-url";
 interface Props {
   name: string;
   authorImage: string;
+  className:string
 }
 
-const AuthorCard = ({ authorImage, name }: Props) => {
+const AuthorCard = ({ authorImage, name,className }: Props) => {
   return (
     <div className="join join-horizontal ">
       <Image
@@ -16,7 +17,7 @@ const AuthorCard = ({ authorImage, name }: Props) => {
         height={20}
         alt={""}
       />
-      <span className="text-sm">{name}</span>
+      <span className={className}>{name}</span>
     </div>
   );
 };
