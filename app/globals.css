@@ -10,7 +10,7 @@
     @apply text-3xl p-2 font-extrabold ;
   }
   h2 {
-    @apply text-2xl p-2;
+    @apply text-2xl ;
   }
 }
 @layer utilities {
