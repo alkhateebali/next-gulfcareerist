@@ -19,7 +19,7 @@ const PostCard = ({ post }: Props) => {
             <div className="col-span-3">
          
               <h2 className="card-title ">{post.title}</h2>
-              <p className="hidden md:block text-gray-600  text-sm  pt-1 pb-6">
+              <p className="hidden md:block text-gray-600  text-sm  pt-1 pb-4">
                 {post.introduction}
               </p>
                 <div className="join join-horizontal ">
