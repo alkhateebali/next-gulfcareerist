@@ -16,6 +16,7 @@ const SearchBox = () => {
               placeholder="Job title, keywords or company"
               labelPlacement="outside"
               size="lg"
+              variant={"bordered"}
               startContent={"What"}
               endContent={<Briefcase />}
               {...register("keywords")}
@@ -27,6 +28,7 @@ const SearchBox = () => {
               placeholder="Town or region in Gulf countries"
               labelPlacement="outside"
               size="lg"
+              variant={"bordered"}
               startContent={"Where"}
               endContent={<Location />}
               {...register("location")}
