@@ -24,17 +24,8 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           <Header/>
-        {/* <header className='py-6'>
-            <nav className='container flex items-center justify-between'>
-              <ul>
-                <li>
-                  <Link href='/'>Home</Link>
-                </li>
-              </ul>
-              <ThemeSwitcher />
-            </nav>
-          </header> */}
-          <main className='container flex items-center justify-between'>
+  
+          <main  className='py-10 px-5'>
             {children}
           </main>
           <footer></footer>

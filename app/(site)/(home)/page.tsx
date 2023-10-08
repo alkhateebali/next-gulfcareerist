@@ -24,9 +24,11 @@ export default async function Home({
 
   return (
     <>
-      <div className="conatainer py-4 lg:px-14 ">
+      
+      <div className="flex items-center justify-center ">
         <SearchBox />
       </div>
+
       <div className="conatainer py-4 lg:px-14 ">
         <div className="grid grid-cols-1  lg:grid-cols-1  gap-4">
           <div className=""></div>

@@ -1,51 +1,46 @@
 "use client";
+import useSearch from "./useSearch";
+import { Button, Input } from "@nextui-org/react";
 import Briefcase from "./icons/Briefcase";
 import Location from "./icons/Location";
-import useSearch from "./useSearch";
 
 const SearchBox = () => {
   const { handleSubmit, onSubmit, register } = useSearch();
   return (
-    <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
-      <div className="flex flex-wrap  items-end  justify-center  gap-4 ">
-        <div className="join join-vertical w-full lg:w-1/3  ">
-          <div className="join join-horizontal ">
-            <label htmlFor="what" className="text-lg pb-2 mr-2">
-              What
-            </label>
-            <Briefcase />
+    <div className="container mx-auto">
+      <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
+        <div className="flex flex-wrap  items-end  justify-center  gap-4 ">
+          <div className=" w-full lg:w-1/3  ">
+            <Input
+              type="text"
+              placeholder="Job title, keywords or company"
+              labelPlacement="outside"
+              size="lg"
+              startContent={"What"}
+              endContent={<Briefcase />}
+              {...register("keywords")}
+            />
           </div>
-
-          <input
-            type="text"
-            placeholder="Job title, keywords or company"
-            className="input input-bordered input-primary  "
-            {...register("keywords")}
-          />
-        </div>
-        <div className="join join-vertical w-full   lg:w-1/3  ">
-          <div className="join join-horizontal">
-            <label htmlFor="where" className="text-lg pb-2 pr-2">
-              Where
-            </label>
-            <Location />
+          <div className=" w-full lg:w-1/3  ">
+            <Input
+              type="text"
+              placeholder="Town or region in Gulf countries"
+              labelPlacement="outside"
+              size="lg"
+              startContent={"Where"}
+              endContent={<Location />}
+              {...register("location")}
+            />
+            <input hidden value={1} {...register("page")} />
           </div>
-          
-          <input
-            type="text"
-            placeholder="Town or region in Gulf countries"
-            className="input input-bordered input-primary "
-            {...register("location")}
-          />
-          <input hidden value={1} {...register("page")} />
+          <div className="w-full lg:w-1/6 ">
+            <Button type="submit" color="primary" size="lg" radius="none">
+              Search
+            </Button>
+          </div>
         </div>
-        <div className="w-full lg:w-1/6 ">
-          <button type="submit" className="btn btn-primary w-full   ">
-            Search
-          </button>
-        </div>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 };
 
