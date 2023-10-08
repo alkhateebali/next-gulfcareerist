@@ -1,9 +1,11 @@
 import '../globals.css'
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Header from "./layout/Navbar";
+import Header from "./layout/Header";
 import { Footer } from "./layout/Footer";
 import Providers from './providers'
+import ThemeSwitcher from './components/ThemeSwitcher'
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,11 +23,21 @@ export default function RootLayout({
     <html lang="en" data-theme="corporate">
       <body className={inter.className}>
         <Providers>
-          <Header />
-          <main className="min-h-screen justify-center   px-4  py-8    ">
+          <Header/>
+        {/* <header className='py-6'>
+            <nav className='container flex items-center justify-between'>
+              <ul>
+                <li>
+                  <Link href='/'>Home</Link>
+                </li>
+              </ul>
+              <ThemeSwitcher />
+            </nav>
+          </header> */}
+          <main className='container flex items-center justify-between'>
             {children}
           </main>
-          <Footer />
+          <footer></footer>
         </Providers>
       </body>
     </html>
