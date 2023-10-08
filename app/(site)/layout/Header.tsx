@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import logo from "@/public/img/logo.svg";
+// import logo from "@/public/img/logo.svg";
 import Link from "next/link";
 import {
   Navbar,
@@ -13,6 +13,8 @@ import {
   Button,
 } from "@nextui-org/react";
 import { useState } from "react";
+import ThemeSwitcher from "../components/ThemeSwitcher";
+import { Logo } from "./Logo";
 // bg-base-100 shadow-md text-zinc-950"
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,13 +33,14 @@ const Header = () => {
 
     <NavbarContent className="sm:hidden pr-3" justify="center">
       <NavbarBrand>
-      <Image src={logo} alt="Gulf Careerist" width="200" height="50" />
+       <Logo w={200} h={50}/>
+      {/* <Image src={logo} alt="Gulf Careerist" width="200" height="50" /> */}
       </NavbarBrand>
     </NavbarContent>
 
     <NavbarContent className="hidden sm:flex gap-4" justify="center">
       <NavbarBrand className="mr-20">
-      <Image src={logo} alt="Gulf Careerist" width="255" height="50" />
+       <Logo w={225} h={50}/>
      
       </NavbarBrand>
       <NavbarItem isActive>
@@ -53,14 +56,15 @@ const Header = () => {
     </NavbarContent>
 
     <NavbarContent justify="end">
-      <NavbarItem className="hidden lg:flex">
+      <ThemeSwitcher/>
+      {/* <NavbarItem className="hidden lg:flex">
         <Link href="#">Login</Link>
       </NavbarItem>
       <NavbarItem>
         <Button as={Link} color="primary" href="#" variant="flat">
           Sign Up
         </Button>
-      </NavbarItem>
+      </NavbarItem> */}
     </NavbarContent>
 
     <NavbarMenu>
@@ -72,7 +76,7 @@ const Header = () => {
               index === 2 ? "warning" : index === menuItems.length - 1 ? "danger" : "foreground"
             }
             href="#"
-            size="lg"
+            // size="lg"
           >
             {item}
           </Link>
