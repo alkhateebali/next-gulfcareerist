@@ -1,7 +1,7 @@
 import JobsGrid from "./jobsGrid/JobsGrid";
 import useJobs from "./jobsGrid/useJobs";
 import SearchBox from "../components/searchBox/SearchBox";
-
+import GridFooter from "./jobsGrid/GridFooter";
 interface Props {
   searchParams: {
     keywords: string;
@@ -34,6 +34,7 @@ export default async function Home({
           <div className=""></div>
           <div className="col-span-1 lg:px-14">
             <JobsGrid jobs={jobs} />
+            { jobs && <GridFooter />}
           </div>
         </div>
       </div>

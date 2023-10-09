@@ -25,7 +25,7 @@ export default function RootLayout({
         <Providers>
           <Header/>
   
-          <main  className='py-10 px-5'>
+          <main  className='min-h-screen py-10 px-5'>
             {children}
           </main>
           <Footer/>

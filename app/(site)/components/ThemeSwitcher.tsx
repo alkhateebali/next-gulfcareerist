@@ -33,8 +33,6 @@ export default function ThemeSwitcher() {
           <MoonIcon className={className} />
         )
       }
-      // startContent={<SunIcon />}
-      // endContent={<MoonIcon />}
     >
       <span className="text-sm hidden  lg:block">Dark mode</span>
     </Switch>
