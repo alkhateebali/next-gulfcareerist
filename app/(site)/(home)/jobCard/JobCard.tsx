@@ -13,10 +13,9 @@ const JobCard = ({ job }: Props) => {
 
   return (
     <>
-      <div className="w-full bg-base-100 border-b-1 border-default dark:border-warning my-4">
-          <h2 className=" text-primary ">
-            <Link href={url}>{job.title}</Link>
-          </h2>
+      <Link href={job.url} target="_blank">
+        <div className="w-full bg-base-100 border-b-1 border-default dark:border-warning hover:cursor-pointer my-4">
+          <h2 className=" text-primary ">{job.title}</h2>
           <h3 className="prose-md">{job.company}</h3>
           <div className="flex flex-nowrap my-2">
             <Location color="warning" />
@@ -27,8 +26,8 @@ const JobCard = ({ job }: Props) => {
             dangerouslySetInnerHTML={{ __html: job.description }}
           />
           <FromNow date={job.date} />
-
-      </div>
+        </div>
+      </Link>
     </>
   );
 };

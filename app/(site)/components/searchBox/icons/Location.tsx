@@ -1,8 +1,8 @@
 interface Props {
-  color?: string;
+  color: string;
 }
 
-const Location = ({ color ="black"}: Props) => {
+const Location = ({ color}: Props) => {
   return (
     <svg
       width={24}

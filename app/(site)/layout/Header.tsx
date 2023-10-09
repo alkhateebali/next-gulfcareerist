@@ -21,6 +21,7 @@ const Header = () => {
 
   const menuItems = [
     "Search Jobs",
+    "Remote Jobs",
     "Blog",
   
 
@@ -50,6 +51,11 @@ const Header = () => {
       </NavbarItem>
       <NavbarItem>
         <Link color="foreground" href="#">
+         Remote Jobs
+        </Link>
+      </NavbarItem>
+      <NavbarItem>
+        <Link color="foreground" href="#">
          Blog
         </Link>
       </NavbarItem>
@@ -57,14 +63,6 @@ const Header = () => {
 
     <NavbarContent justify="end">
       <ThemeSwitcher/>
-      {/* <NavbarItem className="hidden lg:flex">
-        <Link href="#">Login</Link>
-      </NavbarItem>
-      <NavbarItem>
-        <Button as={Link} color="primary" href="#" variant="flat">
-          Sign Up
-        </Button>
-      </NavbarItem> */}
     </NavbarContent>
 
     <NavbarMenu>

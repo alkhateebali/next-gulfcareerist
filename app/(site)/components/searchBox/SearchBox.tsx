@@ -30,7 +30,7 @@ const SearchBox = () => {
               size="lg"
               variant={"bordered"}
               startContent={"Where"}
-              endContent={<Location />}
+              endContent={<Location  color="black" />}
               {...register("location")}
             />
             <input hidden value={1} {...register("page")} />
