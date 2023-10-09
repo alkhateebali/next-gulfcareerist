@@ -32,7 +32,7 @@ export default async function Home({
       <div className="conatainer py-4 lg:px-14 ">
         <div className="grid grid-cols-1  lg:grid-cols-1  gap-4">
           <div className=""></div>
-          <div className="col-span-1 px-14">
+          <div className="col-span-1 lg:px-14">
             <JobsGrid jobs={jobs} />
           </div>
         </div>

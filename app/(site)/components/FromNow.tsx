@@ -5,7 +5,8 @@ interface Props {
 const FromNow = ({ date }: Props) => {
   const specificDate = moment(date);
   return (
-    <div className="badge badge-ghost  gap-2">{specificDate.fromNow()}</div>
+    <span className="inline-block px-2 py-1 text-xs font-semibold leading-none text-white bg-secondary   dark:bg-primary   rounded-full  my-4">{specificDate.fromNow()}</span>
+
   );
 };
 

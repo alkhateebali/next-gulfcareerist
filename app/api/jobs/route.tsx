@@ -20,7 +20,7 @@ export async function GET(request: NextRequest) {
       "Mozilla/5.0 (X11; Linux x86_64; rv:31.0) Gecko/20100101 Firefox/31.0",
     sort: "relevance", // Type of sort. Available values are 'relevance' (default), 'date', and 'salary'.
     start_num: 1, //  Num of first offer returned in entire result space should be >= 1 and <= Number of hits. Default: 1
-    pagesize: 20, // Number of offers returned in one call. Default: 20. Max: 99.
+    pagesize: 10, // Number of offers returned in one call. Default: 20. Max: 99.
     // contracttype: '', // Character code for contract types:<br>
     // *    'p'    - permanent job<br>
     // *    'c'    - contract<br>
