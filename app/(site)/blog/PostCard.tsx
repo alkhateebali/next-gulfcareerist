@@ -1,66 +1,50 @@
 import Image from "next/image";
-import { Post } from "@/types/blog/post";
 import Link from "next/link";
-import FromNow from "../components/FromNow";
-import AuthorCard from "./AuthorCard";
-import FormatedDate from "../components/FormatedDate";
-
+import { FromNow } from "../components/FromNow";
+import { Post } from "@/types/blog/post";
+import { ClockIcon, PersonIcon } from "../components/icons/AppIcons";
 interface Props {
   post: Post;
 }
-
 const PostCard = ({ post }: Props) => {
-  // console.log(post);
   return (
-    <Link href={`blog/article/${post.slug}`}>
-      <div className="card w-dull bg-base-100 border-b border-gray-200  my-2  hover:bg-slate-50  transition">
-        <div className="card-body">
-          <div className="grid grid-cols-4 gap-4">
-            <div className="col-span-3">
-         
-              <h2 className="card-title ">{post.title}</h2>
-              <p className="hidden md:block text-gray-600  text-sm  pt-1 pb-4">
-                {post.introduction}
-              </p>
-                <div className="join join-horizontal ">
-            
-                <Image
-                  src={post.authorImage}
-                  className="rounded-full h-5 w-5  mr-2"
-                  width={20}
-                  height={20}
-                  alt={""}
-                />
-                <span className="text-sm">{post.authorname}</span>
-              </div>
-            </div>
-            <div className="col-span-1">
-              <Image
-                className="object-cover rounded-sm w-full h-auto"
-                src={post.mainImage}
-                alt=""
-                width={200}
-                height={200}
-              />
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+      <Link href={`blog/${post.slug}`}>
+        <div className="rounded overflow-hidden shadow-lg flex flex-col">
+          <div className="relative">
+            <Image
+              className="object-cover rounded-sm w-full h-auto"
+              src={post.mainImage}
+              alt=""
+              width={200}
+              height={200}
+            />
+
+            <div className="text-xs absolute top-0 right-0 bg-primary  px-4 py-2 text-white mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+              {post.categories[0]}
             </div>
           </div>
-
-          <div className="text-sm">
-            <ul>
-              <span className="mr-8">
-                <FormatedDate date={post._createdAt.toString()} />
+          <div className="px-6 py-4 mb-auto">
+            <span className="font-medium text-lg  hover:text-primary ">
+              {post.title}
+            </span>
+            <p className="text-gray-500 text-sm">{post.introduction}</p>
+          </div>
+          <div className="px-6 py-3 flex flex-row items-center justify-between bg-gray-100">
+            <span className="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center">
+              <ClockIcon />
+              <span className="m-1">
+                <FromNow date={post._createdAt.toString()} />
               </span>
-              <span className="mr-2">Posted in</span>
-              {post.categories.map((category) => (
-                <li className="badge badge-ghost  gap-2 mr-2" key={category}>
-                  {category}
-                </li>
-              ))}
-            </ul>
+            </span>
+            <span className="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center">
+              <PersonIcon />
+              <span className="ml-1">{post.authorname}</span>
+            </span>
           </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };
 

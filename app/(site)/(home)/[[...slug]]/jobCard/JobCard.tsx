@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Job, getId } from "@/types/jobs/Job";
-import FromNow from "@/app/(site)/components/FromNow"
+import {BadgeFromNow} from "@/app/(site)/components/FromNow"
 import { LocationIcon } from "@/app/(site)/components/icons/AppIcons";
 
 interface Props {
@@ -25,7 +25,7 @@ const JobCard = ({ job }: Props) => {
             className="prose-grey my-2"
             dangerouslySetInnerHTML={{ __html: job.description }}
           />
-          <FromNow date={job.date} />
+          <BadgeFromNow date={job.date} />
         </div>
       </Link>
     </>
