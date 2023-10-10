@@ -22,32 +22,26 @@ const Article = async ({ params }: { params: { slug: string } }) => {
             <div className="">
               <h1 className="font-bold text-4xl">{post.title}</h1>
               <div className="py-5 text-sm font-regular  flex">
-                <span className="mr-3 flex flex-row items-center">
+                <span className="mr-3 flex flex-row items-center hover:text-primary  ">
                   <ClockIcon />
                   <span className="ml-1">
                     <FromNow date={post.publishedAt.toString()} />
                   </span>
                 </span>
-
-                <a
-                  href="#"
-                  className="flex flex-row items-center hover:text-indigo-600  mr-3"
-                >
+                <span className="flex flex-row items-center hover:text-primary  mr-3">
                   <PersonIcon />
-                  <span className="ml-1">AliSher Azimi</span>
-                </a>
-
-                <a
-                  href="#"
-                  className="flex flex-row items-center hover:text-indigo-600"
-                >
+                  <span className="ml-1">{post.authorname}</span>
+                </span>
+                <span className="flex flex-row items-center hover:text-primary ">
                   <TagIcon />
                   <span className="ml-1">
                     {post.categories.map((cat) => (
-                      <span  className="pr-1" key={cat}>{cat}</span>
+                      <span className="pr-1" key={cat}>
+                        {cat}
+                      </span>
                     ))}
                   </span>
-                </a>
+                </span>
               </div>
               <div>
                 <Image
@@ -59,7 +53,7 @@ const Article = async ({ params }: { params: { slug: string } }) => {
                 />
               </div>
               <p className="text-base leading-8 my-5">
-                {/* <PortableText value={post.body} /> */}
+                <PortableText value={post.body} />
               </p>
             </div>
           </div>

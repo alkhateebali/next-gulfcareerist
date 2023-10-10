@@ -11,18 +11,14 @@ const Blog = async () => {
   return (
     <>
       <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:py-10">
-        <div className="border-b mb-5 flex justify-between text-sm">
-          <div className="text-indigo-600 flex items-center pb-2 pr-2 border-b-2 border-indigo-600 uppercase">
-            <a href="#" className="font-semibold inline-block">
-              Cooking BLog
-            </a>
-          </div>
-          <a href="#">See All</a>
-        </div>
-
-        <div className="col-span-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
           {posts.length > 0 &&
-            posts.map((post) => <PostCard key={post._id} post={post} />)}
+            posts.map((post) => (
+              <div key={post._id}>
+                <PostCard post={post} />
+              </div>
+            ))}
+          <aside><Aside/></aside>
         </div>
       </div>
     </>
