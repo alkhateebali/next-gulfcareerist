@@ -18,7 +18,7 @@ const Blog = async () => {
                 <PostCard post={post} />
               </div>
             ))}
-          <aside><Aside/></aside>
+          <aside className="lg:fixed  lg:right-9  lg:h-screen "><Aside/></aside>
         </div>
       </div>
     </>

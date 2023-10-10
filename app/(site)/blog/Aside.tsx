@@ -1,18 +1,20 @@
 import { getCategories } from "@/sanity/sanity-utils";
-
+import Tag from "./Tag";
 const Aside = async () => {
   const categories = await getCategories();
   return (
-    <div className="">
-      <p className="text-md border-l-2 font-semibold">
-        Discover more of what matters to you
-      </p>
-      <p className="py-4">
-        {categories.map((category) => (
-          <span className="badge badge-ghost  gap-2 font-semibold" key={category._id}>{category.title}</span>
-        ))}
+
+    <div className="block rounded-lg bg-white p-6  shadow-md">
+      <h5 className="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+      Discover more of what matters to you
+      </h5>
+      <p className="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+      {categories.map((category) => (
+          <Tag key={category._id} title={category.title} />
+       ))}
       </p>
     </div>
+    
   );
 };
 
