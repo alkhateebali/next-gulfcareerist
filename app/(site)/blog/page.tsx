@@ -3,6 +3,7 @@ import PostCard from "./PostCard";
 import Breadcrumbs from "./Breadcrumbs";
 import Aside from "./Aside";
 import Head from "next/head";
+import BlogPagination from "./BlogPagination";
 <Head>
   <link rel="canonical" href="https://gulfcareerist.com/blog" />
 </Head>;
@@ -18,8 +19,10 @@ const Blog = async () => {
                 <PostCard post={post} />
               </div>
             ))}
+       
           <aside className="lg:fixed  lg:right-9  lg:h-screen "><Aside/></aside>
         </div>
+        <BlogPagination/>
       </div>
     </>
   );

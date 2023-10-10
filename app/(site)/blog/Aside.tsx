@@ -4,7 +4,7 @@ const Aside = async () => {
   const categories = await getCategories();
   return (
 
-    <div className="block rounded-lg bg-white p-6  shadow-md">
+    <div className="block rounded-lg p-6  shadow-md dark:bg-default">
       <h5 className="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
       Discover more of what matters to you
       </h5>
