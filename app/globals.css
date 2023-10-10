@@ -15,5 +15,8 @@
   h3 {
     @apply text-xl  font-semibold py-1;
   }
+  a {
+    @apply  hover:text-primary hover:cursor-pointer;
+  }
 }
 

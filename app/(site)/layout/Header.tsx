@@ -21,7 +21,6 @@ const Header = () => {
 
   const menuItems = [
     "Search Jobs",
-    "Remote Jobs",
     "Blog",
   
 
@@ -35,7 +34,6 @@ const Header = () => {
     <NavbarContent className="sm:hidden pr-3" justify="center">
       <NavbarBrand>
        <Logo w={200} h={50}/>
-      {/* <Image src={logo} alt="Gulf Careerist" width="200" height="50" /> */}
       </NavbarBrand>
     </NavbarContent>
 
@@ -45,17 +43,12 @@ const Header = () => {
      
       </NavbarBrand>
       <NavbarItem isActive>
-        <Link aria-current="page" color="warning" href="#">
+        <Link aria-current="page" color="warning" href="/">
         Search Jobs
         </Link>
       </NavbarItem>
       <NavbarItem>
-        <Link color="foreground" href="#">
-         Remote Jobs
-        </Link>
-      </NavbarItem>
-      <NavbarItem>
-        <Link color="foreground" href="#">
+        <Link color="foreground" href="/blog">
          Blog
         </Link>
       </NavbarItem>
