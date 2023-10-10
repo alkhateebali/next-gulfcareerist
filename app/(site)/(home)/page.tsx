@@ -2,6 +2,7 @@ import JobsGrid from "./jobsGrid/JobsGrid";
 import useJobs from "./jobsGrid/useJobs";
 import SearchBox from "../components/searchBox/SearchBox";
 import GridFooter from "./jobsGrid/GridFooter";
+import usePaging from "./jobsGrid/usePaging";
 interface Props {
   searchParams: {
     keywords: string;
@@ -16,7 +17,7 @@ export default async function Home({
   searchParams: {
     keywords: string;
     location: string;
-    page: number;
+    page: string;
   };
 }) {
   const response = await useJobs(searchParams);
@@ -34,7 +35,7 @@ export default async function Home({
           <div className=""></div>
           <div className="col-span-1 lg:px-14">
             <JobsGrid jobs={jobs} />
-            { jobs && <GridFooter />}
+            { jobs && <GridFooter  searchParams={searchParams}/>}
           </div>
         </div>
       </div>

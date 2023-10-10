@@ -2,7 +2,7 @@
 const useJobs = async (searchParams: {
   keywords: string;
   location: string;
-  page: number;
+  page: string;
 }) => {
   const queryString = `location=${searchParams.location}&keywords=${searchParams.keywords}&page=${searchParams.page}`;
   const url = `http://localhost:3000/api/jobs?${queryString}`;
