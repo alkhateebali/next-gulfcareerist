@@ -4,8 +4,9 @@ import { Inter } from "next/font/google";
 import Header from "./layout/Header";
 import { Footer } from "./layout/Footer";
 import Providers from './providers'
-import ThemeSwitcher from './components/ThemeSwitcher'
-import Link from 'next/link';
+import GoogleScript from './GoogleScript';
+
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" >
+
+    <GoogleScript/>
       <body className={inter.className}>
         <Providers>
           <Header/>

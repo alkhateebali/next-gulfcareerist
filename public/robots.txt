@@ -1,0 +1,16 @@
+User-agent: *
+Disallow: /
+
+User-agent: Mediapartners-Google
+Disallow:
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+Sitemap: https://gulfcareerist.com/sitemap.xml
