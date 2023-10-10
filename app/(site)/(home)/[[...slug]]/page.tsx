@@ -2,6 +2,12 @@ import JobsGrid from "./jobsGrid/JobsGrid";
 import useJobs from "./jobsGrid/useJobs";
 import SearchBox from "../../components/searchBox/SearchBox";
 import dynamic from "next/dynamic";
+import Head from 'next/head';
+<Head>
+<link rel="canonical" href="https://gulfcareerist.com/"/>
+<link rel="shortlink" href="https://gulfcareerist.com/"/>
+</Head>
+
 const GridFooter = dynamic(() => import("./jobsGrid/GridFooter"));
 interface Props {
   searchParams: {

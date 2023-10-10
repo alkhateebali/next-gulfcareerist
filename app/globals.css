@@ -20,3 +20,11 @@
 }
 }
 
+h1  span {
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  background-color: #49beb7;
+  margin-right: 8px;
+  margin-bottom: 3px;
+}

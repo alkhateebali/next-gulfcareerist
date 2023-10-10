@@ -1,9 +1,11 @@
 import { getPosts } from "@/sanity/sanity-utils";
 import PostCard from "./PostCard";
 import Breadcrumbs from "./Breadcrumbs";
-
 import Aside from "./Aside";
-
+import Head from "next/head";
+<Head>
+  <link rel="canonical" href="https://gulfcareerist.com/blog" />
+</Head>;
 const Blog = async () => {
   const posts = await getPosts();
   return (

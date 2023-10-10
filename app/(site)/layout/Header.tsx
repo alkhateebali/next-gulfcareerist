@@ -31,13 +31,17 @@ const Header = () => {
 
     <NavbarContent className="sm:hidden pr-3" justify="center">
       <NavbarBrand>
-       <Logo w={200} h={50}/>
+       <Link href={'/'} title="home">
+         <Logo w={200} h={50}/>
+       </Link>
       </NavbarBrand>
     </NavbarContent>
 
     <NavbarContent className="hidden sm:flex gap-4" justify="center">
       <NavbarBrand className="mr-20">
-       <Logo w={225} h={50}/>
+      <Link href={'/'} title="home">
+         <Logo w={200} h={50}/>
+       </Link>
      
       </NavbarBrand>
       <NavbarItem isActive>

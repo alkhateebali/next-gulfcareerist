@@ -1,4 +1,7 @@
-
+import Head from "next/head";
+<Head>
+  <link rel="canonical" href="https://gulfcareerist.com/privacy-policy" />
+</Head>;
 const page = () => {
   return (
     <div className=" grid-cols-1  py-4 lg:px-14 ">
