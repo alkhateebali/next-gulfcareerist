@@ -5,10 +5,10 @@ export const Footer = () => {
   return (
     <footer className="flex  flex-col items-center justify-center text-center p-10 bg-default-100 gab-4">
       <nav className="flex  gap-4 py-1">
-        <Link href={'/'}>Search Jobs</Link>
-        <Link  href={'/blog'}>Blog</Link>
-        <Link  href={"/contact-us"}>Contact us</Link>
-        <Link  href={'/privacy-policy'}>Privacy Policy</Link>
+        <Link className="link " href={'/'}>Search Jobs</Link>
+        <Link   className="link " href={'/blog'}>Blog</Link>
+        <Link   className="link " href={"/contact-us"}>Contact us</Link>
+        <Link   className="link " href={'/privacy-policy'}>Privacy Policy</Link>
       </nav>
       <nav>
         <div className="flex gap-4 py-4">

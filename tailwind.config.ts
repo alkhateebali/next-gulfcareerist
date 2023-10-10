@@ -21,6 +21,7 @@ const config: Config = {
           foreground: '#ffffff'
         },
         warning:{
+         
           DEFAULT: '#fa9f00',
           foreground: '#ffffff'
         }

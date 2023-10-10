@@ -1,8 +1,8 @@
 import JobsGrid from "./jobsGrid/JobsGrid";
 import useJobs from "./jobsGrid/useJobs";
-import SearchBox from "../components/searchBox/SearchBox";
-import GridFooter from "./jobsGrid/GridFooter";
-import usePaging from "./jobsGrid/usePaging";
+import SearchBox from "../../components/searchBox/SearchBox";
+import dynamic from "next/dynamic";
+const GridFooter = dynamic(() => import("./jobsGrid/GridFooter"));
 interface Props {
   searchParams: {
     keywords: string;
@@ -25,7 +25,6 @@ export default async function Home({
 
   return (
     <>
-      
       <div className="flex items-center justify-center ">
         <SearchBox />
       </div>
@@ -35,7 +34,7 @@ export default async function Home({
           <div className=""></div>
           <div className="col-span-1 lg:px-14">
             <JobsGrid jobs={jobs} />
-            { jobs && <GridFooter  searchParams={searchParams}/>}
+            {jobs && <GridFooter searchParams={searchParams} />}
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ const useSearch = () => {
   const router = useRouter();
   const onSubmit = (data: Search) => {
     const queryString = `location=${data.location}&keywords=${data.keywords}&page=${data.page}`;
-    const url = `http://localhost:3000/?${queryString}`;
+    const url = `http://localhost:3000/search?${queryString}`;
     router.push(url);
   };
   return { handleSubmit, onSubmit, register };
