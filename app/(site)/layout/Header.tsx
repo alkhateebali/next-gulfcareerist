@@ -22,8 +22,6 @@ const Header = () => {
   const menuItems = [
     "Search Jobs",
     "Blog",
-  
-
   ];
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}  isBordered>
@@ -43,12 +41,12 @@ const Header = () => {
      
       </NavbarBrand>
       <NavbarItem isActive>
-        <Link aria-current="page" color="warning" href="/">
+        <Link aria-current="page" color="warning" href="/" className="link">
         Search Jobs
         </Link>
       </NavbarItem>
       <NavbarItem>
-        <Link color="foreground" href="/blog">
+        <Link color="foreground" href="/blog" className="link">
          Blog
         </Link>
       </NavbarItem>

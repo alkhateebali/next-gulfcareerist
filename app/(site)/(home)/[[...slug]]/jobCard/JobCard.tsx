@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Job, getId } from "@/types/jobs/Job";
-import FromNow from "../../../components/FromNow";
-import Location from "../../../components/searchBox/icons/Location";
+import FromNow from "@/app/(site)/components/FromNow"
+import { LocationIcon } from "@/app/(site)/components/icons/AppIcons";
 
 interface Props {
   job: Job;
@@ -18,7 +18,7 @@ const JobCard = ({ job }: Props) => {
           <h2 className=" text-primary ">{job.title}</h2>
           <h3 className="prose-md">{job.company}</h3>
           <div className="flex flex-nowrap my-2">
-            <Location color="warning" />
+            <LocationIcon/>
             <span className="px-2"> {job.locations}</span>
           </div>
           <div

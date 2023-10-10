@@ -29,13 +29,11 @@ export default function RootLayout({
   return (
     <html lang="en" >
      
-        <link rel='icon' href='/favicon.ico' />
 
     <GoogleScript/>
       <body className={roboto.className}>
         <Providers>
           <Header/>
-  
           <main  className='min-h-screen py-10 px-5'>
             {children}
           </main>
