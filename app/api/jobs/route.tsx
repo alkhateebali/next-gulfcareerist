@@ -6,7 +6,7 @@ export async function GET(request: NextRequest) {
   const keywords = request.nextUrl.searchParams.get("keywords");
   const page = request.nextUrl.searchParams.get("page");
 
-  const careerjetUrl =process.env.CARRERJET_API_URL
+  const careerjetUrl =process.env.CARRERJET_API_URL ? process.env.CARRERJET_API_URL:""
 
   const params = {
     location: location,

@@ -16,7 +16,7 @@ const Blog = async () => {
           Gulf Carrerist Blog
         </h1>
         <p className="md:px-20 py-5">
-          in the Gulf, it's all about the people and the keys to success. Meet
+          in the Gulf&apos; it&rsquo;s all about the people and the keys to success. Meet
           some of the professionals shaping careers in our region and discover
           the secrets to thriving in Gulf careers.
         </p>
