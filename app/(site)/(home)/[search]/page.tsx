@@ -3,6 +3,7 @@ import useJobs from "./jobsGrid/useJobs";
 import SearchBox from "../../components/searchBox/SearchBox";
 import dynamic from "next/dynamic";
 import Head from "next/head";
+import Container from "../../components/Container";
 
 const GridFooter = dynamic(() => import("./jobsGrid/GridFooter"));
 interface Props {
@@ -26,7 +27,7 @@ export default async function Home({
   const jobs = response.jobs;
 
   return (
-    <>
+    <Container>
       <SearchBox />
 
       <div className="conatainer py-4 lg:px-14 ">
@@ -37,7 +38,8 @@ export default async function Home({
             {jobs && <GridFooter searchParams={searchParams} />}
           </div>
         </div>
-      </div>
-    </>
+        </div>
+        </Container>
+
   );
 }

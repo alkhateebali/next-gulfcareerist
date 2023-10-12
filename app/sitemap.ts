@@ -9,6 +9,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: "https://gulfcareerist.com/search ",
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 1,
+    },
+    {
       url: "https://gulfcareerist.com/privacy-policy ",
       lastModified: new Date(),
       changeFrequency: "yearly",

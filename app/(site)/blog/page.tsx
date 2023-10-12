@@ -1,18 +1,17 @@
 import { getPosts } from "@/sanity/sanity-utils";
 import PostCard from "./PostCard";
 import Breadcrumbs from "./Breadcrumbs";
-import Aside from "./Aside";
 import Head from "next/head";
-import BlogPagination from "./BlogPagination";
+import Container from "../components/Container";
 <Head>
   <link rel="canonical" href="https://gulfcareerist.com/blog" />
 </Head>;
 const Blog = async () => {
   const posts = await getPosts();
   return (
-    <>
+    <Container>
       <div className="text-center md:px-20">
-        <h1 className="max-w-5xl text-2xl font-bold leading-none tracking-tighter text-neutral-600 md:text-3xl lg:text-4xl lg:max-w-7xl">
+        <h1 className="max-w-5xl text-2xl font-bold leading-none tracking-tighter md:text-3xl lg:text-4xl lg:max-w-7xl">
           Gulf Carrerist Blog
         </h1>
         <p className="md:px-20 py-5">
@@ -42,7 +41,7 @@ const Blog = async () => {
             ))}
         </div>
       </div>
-    </>
+    </Container>
   );
 };
 

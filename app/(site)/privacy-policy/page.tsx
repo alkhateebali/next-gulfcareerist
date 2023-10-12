@@ -1,10 +1,12 @@
 import Head from "next/head";
+import Container from "../components/Container";
 <Head>
   <link rel="canonical" href="https://gulfcareerist.com/privacy-policy" />
 </Head>;
 const page = () => {
-  return (
-    <div className=" grid-cols-1  py-4 lg:px-14 ">
+  return ( 
+    <Container>
+    <div className=" grid-cols-1  py-4 lg:px-9   ">
          <div className="col-span-1 lg:px-14">
        
            <article id="post-986" >
@@ -190,6 +192,7 @@ const page = () => {
            
          </div>
     </div>
+    </Container>
   )
 }
 

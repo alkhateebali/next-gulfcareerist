@@ -52,7 +52,7 @@ export default function RootLayout({
       <body className={roboto.className}>
         <Providers>
           <Header />
-          <main className="min-h-screen py-10 px-5">{children}</main>
+          <main className="min-h-screen">{children}</main>
           <Footer />
         </Providers>
       </body>

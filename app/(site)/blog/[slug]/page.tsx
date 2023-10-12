@@ -7,6 +7,7 @@ import {
   TagIcon,
 } from "../../components/icons/AppIcons";
 import { FromNow } from "../../components/FromNow";
+import Container from "../../components/Container";
 interface Props {
   params: { slug: string };
 }
@@ -15,7 +16,8 @@ const Article = async ({ params }: { params: { slug: string } }) => {
   const post = await getPost(slug);
   //   console.log(post.mainImage)
   return (
-    <>
+    <Container>
+
       <div className="relative p-4">
         <div className="max-w-3xl mx-auto">
           <div className="mt-3 rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
@@ -59,7 +61,7 @@ const Article = async ({ params }: { params: { slug: string } }) => {
           </div>
         </div>
       </div>
-    </>
+    </Container>
   );
 };
 

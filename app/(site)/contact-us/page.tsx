@@ -1,17 +1,18 @@
 import aboutImage from "@/public/img/about.png";
 import Image from "next/image";
 import Head from "next/head";
+import Container from "../components/Container";
 <Head>
   <link rel="canonical" href="https://gulfcareerist.com/contact-us" />
 </Head>;
 const page = () => {
   return (
-    <>
-      <div className="sm:flex items-center max-w-screen-xl">
+    <Container>
+      <div className="sm:flex items-center max-w-screen-xl  ">
         <div className="sm:w-1/2 p-10">
           <div className="image object-center text-center">
             <Image src={aboutImage} alt="about gulf careerist" />
-            {/* <img src="https://i.imgur.com/WbQnbas.png"> */}
+        
           </div>
         </div>
         <div className="sm:w-1/2 p-5">
@@ -36,7 +37,7 @@ const page = () => {
           </div>
         </div>
       </div>
-    </>
+    </Container>
   );
 };
 
