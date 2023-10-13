@@ -20,8 +20,8 @@ const page = () => {
             <span className="border-b-2 border-primary  uppercase">
               About us
             </span>
-            <h2 className="my-4 font-bold text-3xl  sm:text-4xl ">
-              OUR WEBSITE :{" "}
+            <h2 className="my-4 font-bold text-3xl  sm:text-2xl ">
+              OUR WEBSITE :
               <span className="text-primary">WWW.GULFCAREERIST.COM</span>
             </h2>
             <p>

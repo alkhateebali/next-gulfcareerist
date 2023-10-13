@@ -40,14 +40,14 @@ const Blog = async () => {
           </span>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+        <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
           {posts.length > 0 &&
             posts.map((post) => (
               <div key={post._id}>
                 <PostCard post={post} />
               </div>
             ))}
-        </div>
+        </section>
       </div>
     </Container>
   );

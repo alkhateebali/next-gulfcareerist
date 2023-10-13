@@ -6,15 +6,19 @@ import JobCardSkelton from "./jobCard/JobCardSkelton";
 const Loading = () => {
   return (
     <Container>
-      <SearchBoxSkelton/>
-      <div className="conatainer py-4 lg:px-14 ">
+      <SearchBoxSkelton />
+      <div className="conatainer py-2 lg:px-14 ">
         <div className="grid grid-cols-1  lg:grid-cols-1  gap-4">
           <div className=""></div>
-          <div className="col-span-1 lg:px-14">
-             <JobCardSkelton/>
+          <div className="col-span-1 lg:px-14  h-96">
+            {Array(10)
+              .fill(1)
+              .map((item, index) => (
+                <JobCardSkelton key={index} />
+              ))}
           </div>
         </div>
-        </div>
+      </div>
     </Container>
   );
 };

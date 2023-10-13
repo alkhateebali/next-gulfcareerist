@@ -8,16 +8,38 @@ import {
 } from "../../components/icons/AppIcons";
 import { FromNow } from "../../components/FromNow";
 import Container from "../../components/Container";
+import type { Metadata, ResolvingMetadata } from "next";
+
 interface Props {
   params: { slug: string };
 }
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const slug = params.slug;
+  const post = await getPost(slug);
+  const previousImages = (await parent).openGraph?.images || [];
+  const newImage = post.mainImage;
+  return {
+    title: post.title,
+    description: post.introduction,
+    alternates: {
+      canonical: "https://gulfcareerist.com/blog/" + post.slug,
+    },
+    openGraph: {
+      title: post.title,
+      images: [newImage, ...previousImages],
+    },
+  };
+}
+
 const Article = async ({ params }: { params: { slug: string } }) => {
   const slug = params.slug;
   const post = await getPost(slug);
-  //   console.log(post.mainImage)
+
   return (
     <Container>
-
       <article className="relative p-4">
         <div className="max-w-3xl mx-auto">
           <div className="mt-3 rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
@@ -27,7 +49,9 @@ const Article = async ({ params }: { params: { slug: string } }) => {
                 <span className="mr-3 flex flex-row items-center hover:text-primary  ">
                   <ClockIcon />
                   <span className="ml-1">
-                    <FromNow date={post.publishedAt.toString()} />
+                    <time dateTime={post.publishedAt.toString()}>
+                      <FromNow date={post.publishedAt.toString()} />
+                    </time>
                   </span>
                 </span>
                 <span className="flex flex-row items-center hover:text-primary  mr-3">
@@ -49,11 +73,11 @@ const Article = async ({ params }: { params: { slug: string } }) => {
                 <Image
                   className="object-cover rounded-sm w-full my-4"
                   src={post.mainImage}
-                  alt="How to Land a Job in Gulf Countries in 2024:"
+                  alt=""
                   width={600}
                   height={315}
                 />
-                <figcaption>How to Land a Job in Gulf Countries in 2024:</figcaption>
+                <figcaption></figcaption>
               </figure>
               <p className="text-base leading-8 my-5">
                 <PortableText value={post.body} />

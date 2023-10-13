@@ -5,8 +5,7 @@ import Header from "./layout/Header";
 import { Footer } from "./layout/Footer";
 import Providers from "./providers";
 import GoogleScript from "./GoogleScript";
-import Head from "next/head";
-import Icon from "../icon";
+
 
 const roboto = Roboto({
   subsets: ["latin"],
