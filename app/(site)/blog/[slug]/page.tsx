@@ -18,7 +18,7 @@ const Article = async ({ params }: { params: { slug: string } }) => {
   return (
     <Container>
 
-      <div className="relative p-4">
+      <article className="relative p-4">
         <div className="max-w-3xl mx-auto">
           <div className="mt-3 rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
             <div className="">
@@ -45,22 +45,23 @@ const Article = async ({ params }: { params: { slug: string } }) => {
                   </span>
                 </span>
               </div>
-              <div>
+              <figure>
                 <Image
                   className="object-cover rounded-sm w-full my-4"
                   src={post.mainImage}
-                  alt=""
+                  alt="How to Land a Job in Gulf Countries in 2024:"
                   width={600}
                   height={315}
                 />
-              </div>
+                <figcaption>How to Land a Job in Gulf Countries in 2024:</figcaption>
+              </figure>
               <p className="text-base leading-8 my-5">
                 <PortableText value={post.body} />
               </p>
             </div>
           </div>
         </div>
-      </div>
+      </article>
     </Container>
   );
 };

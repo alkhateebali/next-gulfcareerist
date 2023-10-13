@@ -16,7 +16,7 @@
     @apply text-lg font-medium py-1;
   }
 .link{
-  @apply hover:text-primary
+  @apply hover:text-primary block
 }
 }
 

@@ -1,11 +1,19 @@
 import { getPosts } from "@/sanity/sanity-utils";
 import PostCard from "./PostCard";
-import Breadcrumbs from "./Breadcrumbs";
-import Head from "next/head";
 import Container from "../components/Container";
-<Head>
-  <link rel="canonical" href="https://gulfcareerist.com/blog" />
-</Head>;
+import { Metadata } from "next";
+
+  export const metadata: Metadata = {
+    alternates: {
+      canonical: "https://gulfcareerist.com/blog",
+      languages: {
+        "en-US": "/en-US",
+      },
+    },
+    title: "Gulf Careerist Blog - Insights, Tips, and News for Job Seekers",
+    description:
+      "Explore the Gulf Careerist blog for valuable insights, job search tips, and the latest news on career opportunities in the Gulf region. Stay informed and excel in your job search journey.",
+  };
 const Blog = async () => {
   const posts = await getPosts();
   return (
