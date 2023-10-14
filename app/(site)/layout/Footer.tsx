@@ -3,7 +3,7 @@ import { Facebook, Instagram, LinkedIn, Telegram } from "./FooterIcons";
 
 export const Footer = () => {
   return (
-    <footer className="flex  flex-col  flex-wrap  items-center justify-center text-center p-10 bg-default-100  dark:bg-blue-950  gab-4">
+    <footer className="flex  flex-col  flex-wrap  items-center justify-center text-center p-10 bg-default-50  gab-4">
       <nav className="flex flex-nowrap  gap-4 py-1">
         <Link className="link " href={'/'}>Search Jobs</Link>
         <Link   className="link " href={'/blog'}>Blog</Link>

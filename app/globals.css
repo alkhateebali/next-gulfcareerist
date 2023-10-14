@@ -16,10 +16,13 @@
     @apply text-lg font-medium py-1;
   }
 .link{
-  @apply hover:text-primary block
+  @apply hover:text-primary whitespace-nowrap 
 }
 }
-
+html{
+  color:#1d1d1f ;
+  background-color: #FBF7FF;
+}
 h1  span {
   display: inline-block;
   width: 30px;

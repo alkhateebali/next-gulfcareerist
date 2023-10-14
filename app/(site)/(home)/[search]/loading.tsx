@@ -7,7 +7,7 @@ const Loading = () => {
   return (
     <Container>
       <SearchBoxSkelton />
-      <div className="conatainer py-2 lg:px-14 ">
+      <div className="conatainer lg:px-14 ">
         <div className="grid grid-cols-1  lg:grid-cols-1  gap-4">
           <div className=""></div>
           <div className="col-span-1 lg:px-14  h-96">

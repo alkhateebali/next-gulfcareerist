@@ -30,14 +30,14 @@ const PostCard = ({ post }: Props) => {
           </h2>
           <p className="text-gray-500 text-sm">{post.introduction}</p>
         </section>
-        <footer className="px-6 py-3 flex flex-row items-center justify-between bg-gray-100">
-          <span className="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center">
+        <footer className="px-6 py-3 flex flex-row items-center justify-between bg-default-50">
+          <span className="py-1 text-xs font-regular  mr-1 flex flex-row items-center">
             <ClockIcon />
             <span className="m-1">
               <FromNow date={post._createdAt.toString()} />
             </span>
           </span>
-          <span className="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center">
+          <span className="py-1 text-xs font-regular  mr-1 flex flex-row items-center">
             <PersonIcon />
             <span className="ml-1">{post.authorname}</span>
           </span>

@@ -32,5 +32,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily",
       priority: 0.8,
     },
+    {
+      url: "https://www.gulfcareerist.com/blog/how-to-land-a-job-in-gulf-countries-in-2024-a-guide-for-freshers",
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.8,
+    },
   ];
 }

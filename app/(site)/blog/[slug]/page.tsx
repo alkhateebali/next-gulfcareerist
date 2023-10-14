@@ -79,7 +79,7 @@ const Article = async ({ params }: { params: { slug: string } }) => {
                 />
                 <figcaption></figcaption>
               </figure>
-              <p className="text-base leading-8 my-5">
+              <p className="text-base leading-8 my-5 dark:text-gray-500 ">
                 <PortableText value={post.body} />
               </p>
             </div>
