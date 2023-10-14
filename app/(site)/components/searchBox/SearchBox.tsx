@@ -44,6 +44,7 @@ const SearchBox = ({ direction }: Props) => {
         </div>
         <div className={btnClass}>
           <Button
+          
             type="submit"
             color="primary"
             size="lg"

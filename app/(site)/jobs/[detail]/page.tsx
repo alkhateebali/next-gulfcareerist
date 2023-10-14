@@ -1,6 +1,7 @@
 import { SetJobSlug } from "@/types/jobs/Job";
 import Link from "next/link";
 import CountdownTimer from "./CountdownTimer";
+import DisplayAd from "../../components/Ads/DisplayAd";
 
 interface Props {
   searchParams: {
@@ -16,6 +17,7 @@ const JobDetail = ({
   const careerjetUrl = SetJobSlug(searchParams.id, searchParams.page);
   return (
     <div className="h-screen w-full relative">
+        <DisplayAd/>
       <div className="relative  bottom-0 isolate overflow-hidden px-6 py-24 sm:px-24 xl:py-32">
         <h4 className="mx-auto max-w-2xl text-center text-3xl font-bold tracking-tight sm:text-4xl text-gray-900 dark:text-white">
           You will be redirected shortly ...
@@ -25,14 +27,11 @@ const JobDetail = ({
           Click to apply on our partner's website for the job details you seek.
         </p>
 
-        <div className="mx-auto mt-10 flex max-w-md gap-x-4">
-
-       <CountdownTimer/>
-
-          {/* <Link href={careerjetUrl}> click me</Link> */}
+        <div className="mx-auto mt-10 flex  justify-center items-center  max-w-md gap-x-4">
+          <CountdownTimer url={careerjetUrl} />
         </div>
-
       </div>
+      <DisplayAd/>
     </div>
   );
 };
