@@ -18,6 +18,9 @@
 .link{
   @apply hover:text-primary whitespace-nowrap 
 }
+body{
+  @apply   selection:bg-primary selection:text-neutral-100 dark:selection:bg-primary-500 dark:selection:text-black
+}
 }
 html{
   color:#1d1d1f ;

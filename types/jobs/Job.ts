@@ -31,3 +31,17 @@ export const getId = (url: string) => {
 export interface FetchJobsResponse {
   jobs: Job[];
 }
+export const GetJobSlug = (url: String) => {
+  const start = url.indexOf("job-") + 4;
+  const end1 = url.indexOf("/", start);
+  const end2 = url.indexOf(".html", end1);
+  const id = url.slice(start, end1);
+  const page = url.slice(end1 + 1, end2 + 5);
+  return { id, page };
+};
+
+export const SetJobSlug = (id: string, page: string) => {
+  const affid = process.env.AFF_ID;
+  const url = `https://jobviewtrack.com/en-gb/job-${id}/${page}?affid=${affid}`;
+  return url;
+};

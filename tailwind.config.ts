@@ -22,6 +22,7 @@ const config: Config = {
             foreground: '#ffffff'
           },
           primary: {
+            500:"#00AFDB",
             600:"#484769",
             700: "#5DFBD7",
             800: "#00BCDC",

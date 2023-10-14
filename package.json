@@ -19,6 +19,7 @@
     "next-sanity": "^5.5.5",
     "next-themes": "^0.2.1",
     "react": "latest",
+    "react-countdown-circle-timer": "^3.2.1",
     "react-dom": "latest",
     "react-hook-form": "^7.47.0",
     "sanity": "^3.17.0"
