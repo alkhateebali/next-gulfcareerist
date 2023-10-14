@@ -24,7 +24,7 @@ const JobDetail = ({
         </h4>
 
         <p className="mx-auto mt-2 max-w-xl text-center text-lg leading-8 dark:text-gray-300 text-gray-700">
-          Click to apply on our partner's website for the job details you seek.
+          Click to apply on our partner&apos;s website for the job details you seek.
         </p>
 
         <div className="mx-auto mt-10 flex  justify-center items-center  max-w-md gap-x-4">

@@ -4,7 +4,8 @@ import { Button } from "@nextui-org/react";
 
 const renderTime = (remainingTime: number, url: string) => {
   const handleRedirect = () => {
-    window.location.href = url;
+    window.open(url, "_blank");
+    
   };
   if (remainingTime === 0) {
     return (
