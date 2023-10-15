@@ -17,7 +17,6 @@ const JobDetail = ({
   const careerjetUrl = SetJobSlug(searchParams.id, searchParams.page);
   return (
     <div className="h-screen w-full relative">
-        <DisplayAd/>
       <div className="relative  bottom-0 isolate overflow-hidden px-6 py-24 sm:px-24 xl:py-32">
         <h4 className="mx-auto max-w-2xl text-center text-3xl font-bold tracking-tight sm:text-4xl text-gray-900 dark:text-white">
           You will be redirected shortly ...
