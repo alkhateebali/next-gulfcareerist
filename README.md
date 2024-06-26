@@ -17,7 +17,7 @@ Analytics and AdSense for analytics and monetization.
   - Google AdSense: Monetizes the platform with contextual advertisements, enhancing revenue opportunities.
 
 ## Demo
-  Check out the live demo of [Gulf Careerist](https://next-gulfcareerist-pf07syvoj-ali-alkhateebs-projects.vercel.app/).
+  Check out the live demo soon.
 
 ## Installation
 Clone the repository:
