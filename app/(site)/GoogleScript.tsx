@@ -12,7 +12,7 @@ const GoogleScript = () => {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
     
-            gtag('config', 'G-3K90CLXKFS');`}
+            gtag('config', 'G-000000');`}
      </Script>
     
     <Script strategy="afterInteractive" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1857873264627766"

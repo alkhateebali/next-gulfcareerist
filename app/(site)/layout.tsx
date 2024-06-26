@@ -1,10 +1,10 @@
 import "../globals.css";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
-import Header from "./layout/Header";
 import { Footer } from "./layout/Footer";
 import Providers from "./providers";
 import GoogleScript from "./GoogleScript";
+import Header from "./layout/Header";
 
 
 const roboto = Roboto({

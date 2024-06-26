@@ -1,4 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Gulf Careerist Job Portal
+Gulf Careerist is a cutting-edge job portal built with Next.js, featuring
+server-side rendering, the new Nextjs 14 router, full-stack capabilities, 
+and styled with Tailwind CSS and NextUI library. It integrates Sanity.io for flexible content
+management, Career Jet API for real-time job listings, and utilizes Google
+Analytics and AdSense for analytics and monetization.
+
+## Features
+- Server-side Rendering (SSR): Utilizes Next.js for efficient server-side rendering, enhancing performance and SEO.
+- New Router: The Next.js App Router introduces a new model for building applications using React's latest features such as Server Components, Streaming with Suspense, and Server Actions.
+- Full Stack Development: Next. js is often celebrated as a full-stack framework, capable of handling both client-side and server-side operations. This unique trait stems from its ability to serve static pages, generate server-side rendered pages, and manage API routes, all within a single framework.
+- External API Integration: Integrates Career Jet API for job listings, ensuring up-to-date and relevant job data.
+- Blog with Sanity.io: Utilizes Sanity.io as a headless CMS for managing blog content, providing flexibility and ease of content management.
+- Styling with Tailwind CSS and NextUI: Implements Tailwind CSS for responsive and customizable styling, ensuring a modern and consistent UI.
+- Analytics and Monetization:
+  - Google Analytics: Tracks user interactions and website performance to make informed decisions.
+  - Google AdSense: Monetizes the platform with contextual advertisements, enhancing revenue opportunities.
+
+## Demo
+  Check out the live demo of [Gulf Careerist](https://next-gulfcareerist-pf07syvoj-ali-alkhateebs-projects.vercel.app/).
+
+## Installation
+Clone the repository:
 
 ## Getting Started
 
@@ -29,8 +51,11 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Contributing
+Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
+This project is licensed under the Proprietary License. See the [LICENSE](LICENSE) file for more details.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contact
+For any inquiries or feedback, please contact devbyali@outlook.com.
