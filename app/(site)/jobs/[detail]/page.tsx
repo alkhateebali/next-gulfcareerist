@@ -30,7 +30,7 @@ const JobDetail = ({
           <CountdownTimer url={careerjetUrl} />
         </div>
       </div>
-      <DisplayAd/>
+      {/* <DisplayAd/> */}
     </div>
   );
 };
